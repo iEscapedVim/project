@@ -2,7 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Code2, Layers, Palette, Search, ArrowRight, Monitor, Smartphone, Globe2, TrendingUp } from 'lucide-react';
+import { Layers, Palette, Search, ArrowRight, Monitor, Smartphone, Globe2, TrendingUp } from 'lucide-react';
+
+import { Image } from 'astro:assets';
+import Hero from '../assets/imgs/hero.avif';
+import ChooseUs from '../assets/imgs/us.avif';
 ---
 
 <Layout title="Home">
@@ -24,11 +28,7 @@ import { Code2, Layers, Palette, Search, ArrowRight, Monitor, Smartphone, Globe2
           </div>
         </div>
         <div class="relative slide-right">
-          <img 
-            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80"
-            alt="Digital Agency Hero"
-            class="rounded-lg shadow-2xl"
-          />
+          <Image src={Hero} alt="Digital Agency Hero" class="rounded-lg shadow-2xl"/>
           <div class="absolute -bottom-6 -left-6 bg-background p-6 rounded-lg shadow-xl">
             <div class="flex items-center space-x-4">
               <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -138,11 +138,7 @@ import { Code2, Layers, Palette, Search, ArrowRight, Monitor, Smartphone, Globe2
         </div>
         
         <div class="relative slide-right">
-          <img 
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
-            alt="Team Working"
-            class="rounded-lg shadow-xl"
-          />
+          <Image src={ChooseUs} alt="Team Working" class="rounded-lg shadow-xl" />
         </div>
       </div>
     </div>
