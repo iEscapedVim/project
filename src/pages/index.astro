@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Code2, Layers, Palette, Search, ArrowRight, Monitor, Smartphone, Globe2, TrendingUp } from 'lucide-react';
+---
+
+<Layout title="Home">
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 -z-10"></div>
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8 fade-in">
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+            Transform Your Digital <span class="text-primary">Presence</span>
+          </h1>
+          <p class="text-xl text-muted-foreground">
+            We create exceptional digital experiences that drive growth and success for your business.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <Button size="lg" className="text-lg" href="/contact">Get Started</Button>
+            <Button size="lg" variant="outline" className="text-lg" href="/portfolio">View Portfolio</Button>
+          </div>
+        </div>
+        <div class="relative slide-right">
+          <img 
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80"
+            alt="Digital Agency Hero"
+            class="rounded-lg shadow-2xl"
+          />
+          <div class="absolute -bottom-6 -left-6 bg-background p-6 rounded-lg shadow-xl">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <p class="font-semibold">Success Rate</p>
+                <p class="text-2xl font-bold">98%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+        <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+        <p class="text-muted-foreground">
+          We offer a comprehensive range of digital services to help your business thrive in the digital age.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card className="slide-left p-6">
+          <Monitor className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+          <p class="text-muted-foreground mb-4">
+            Custom websites and web applications built with the latest technologies.
+          </p>
+          <Button variant="link" className="p-0">
+            Learn More <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        </Card>
+        
+        <Card className="p-6 slide-left [animation-delay:200ms]">
+          <Palette className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+          <p class="text-muted-foreground mb-4">
+            Beautiful and intuitive interfaces that deliver exceptional user experiences.
+          </p>
+          <Button variant="link" className="p-0">
+            Learn More <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        </Card>
+        
+        <Card className="p-6 slide-left [animation-delay:400ms]">
+          <Search className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-xl font-semibold mb-2">SEO Optimization</h3>
+          <p class="text-muted-foreground mb-4">
+            Improve your search rankings and drive organic traffic to your website.
+          </p>
+          <Button variant="link" className="p-0">
+            Learn More <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-muted/30">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8 slide-left">
+          <h2 class="text-3xl font-bold">Why Choose Us?</h2>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                <Globe2 className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Global Reach</h3>
+                <p class="text-muted-foreground">
+                  We've worked with clients from over 30 countries, delivering success across borders.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                <Layers className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Expert Team</h3>
+                <p class="text-muted-foreground">
+                  Our team of experts brings years of experience across various digital domains.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                <Smartphone className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Modern Solutions</h3>
+                <p class="text-muted-foreground">
+                  We stay ahead of the curve with the latest technologies and trends.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative slide-right">
+          <img 
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
+            alt="Team Working"
+            class="rounded-lg shadow-xl"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="bg-primary text-primary-foreground rounded-2xl p-12 text-center fade-in">
+        <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+        <p class="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+          Let's work together to create something extraordinary. Contact us today to discuss your project.
+        </p>
+        <Button size="lg" variant="secondary" className="text-lg" href="/contact">
+          Get in Touch
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

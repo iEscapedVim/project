@@ -1,0 +1,83 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '@/styles/globals.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Digital Agency - Web Design, Development, and Digital Marketing Services" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Digital Agency</title>
+    <ViewTransitions />
+  </head>
+  <body class="min-h-screen bg-background font-sans antialiased">
+    <Navbar />
+    <main class="relative">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import { gsap } from 'gsap';
+      import { ScrollTrigger } from 'gsap/ScrollTrigger';
+      
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Fade in elements with .fade-in class
+      gsap.utils.toArray('.fade-in').forEach((element) => {
+        gsap.from(element, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
+      
+      // Slide in elements from left with .slide-left class
+      gsap.utils.toArray('.slide-left').forEach((element) => {
+        gsap.from(element, {
+          opacity: 0,
+          x: -100,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
+      
+      // Slide in elements from right with .slide-right class
+      gsap.utils.toArray('.slide-right').forEach((element) => {
+        gsap.from(element, {
+          opacity: 0,
+          x: 100,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

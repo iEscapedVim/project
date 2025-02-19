@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Search, Monitor, Smartphone, Megaphone, BarChart3, PenTool } from 'lucide-react';
+---
+
+<Layout title="Services">
+  <!-- Hero Section -->
+  <section class="relative py-20">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 -z-10"></div>
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Digital Services</h1>
+        <p class="text-xl text-muted-foreground">
+          Comprehensive digital solutions tailored to elevate your business in the modern digital landscape.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card className="p-8 slide-left">
+          <Monitor className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-2xl font-semibold mb-4">Web Development</h3>
+          <ul class="space-y-3 text-muted-foreground mb-6">
+            <li>• Custom Website Development</li>
+            <li>• E-commerce Solutions</li>
+            <li>• Web Applications</li>
+            <li>• CMS Development</li>
+            <li>• API Integration</li>
+          </ul>
+          <Button className="w-full">Learn More</Button>
+        </Card>
+
+        <Card className="p-8 slide-left [animation-delay:200ms]">
+          <PenTool className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-2xl font-semibold mb-4">UI/UX Design</h3>
+          <ul class="space-y-3 text-muted-foreground mb-6">
+            <li>• User Interface Design</li>
+            <li>• User Experience Design</li>
+            <li>• Wireframing & Prototyping</li>
+            <li>• Mobile App Design</li>
+            <li>• Design Systems</li>
+          </ul>
+          <Button className="w-full">Learn More</Button>
+        </Card>
+
+        <Card className="p-8 slide-left [animation-delay:400ms]">
+          <Megaphone className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-2xl font-semibold mb-4">Digital Marketing</h3>
+          <ul class="space-y-3 text-muted-foreground mb-6">
+            <li>• Social Media Marketing</li>
+            <li>• Content Marketing</li>
+            <li>• Email Marketing</li>
+            <li>• PPC Advertising</li>
+            <li>• Marketing Strategy</li>
+          </ul>
+          <Button className="w-full">Learn More</Button>
+        </Card>
+
+        <Card className="p-8 slide-left">
+          <Search className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-2xl font-semibold mb-4">SEO Services</h3>
+          <ul class="space-y-3 text-muted-foreground mb-6">
+            <li>• On-Page SEO</li>
+            <li>• Technical SEO</li>
+            <li>• Content Optimization</li>
+            <li>• Link Building</li>
+            <li>• Local SEO</li>
+          </ul>
+          <Button className="w-full">Learn More</Button>
+        </Card>
+
+        <Card className="p-8 slide-left [animation-delay:200ms]">
+          <Smartphone className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-2xl font-semibold mb-4">Mobile Development</h3>
+          <ul class="space-y-3 text-muted-foreground mb-6">
+            <li>• iOS App Development</li>
+            <li>• Android App Development</li>
+            <li>• Cross-Platform Apps</li>
+            <li>• Progressive Web Apps</li>
+            <li>• App Maintenance</li>
+          </ul>
+          <Button className="w-full">Learn More</Button>
+        </Card>
+
+        <Card className="p-8 slide-left [animation-delay:400ms]">
+          <BarChart3 className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-2xl font-semibold mb-4">Analytics & Data</h3>
+          <ul class="space-y-3 text-muted-foreground mb-6">
+            <li>• Data Analysis</li>
+            <li>• Performance Tracking</li>
+            <li>• Conversion Optimization</li>
+            <li>• User Behavior Analysis</li>
+            <li>• Custom Reporting</li>
+          </ul>
+          <Button className="w-full">Learn More</Button>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-muted/30">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center fade-in">
+        <h2 class="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
+        <p class="text-xl text-muted-foreground mb-8">
+          Let's discuss how our services can help achieve your business goals.
+        </p>
+        <Button size="lg" className="text-lg" href="/contact">
+          Schedule a Consultation
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

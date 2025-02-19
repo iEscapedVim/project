@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+---
+
+<Layout title="Contact">
+  <!-- Hero Section -->
+  <section class="relative py-20">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 -z-10"></div>
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
+        <p class="text-xl text-muted-foreground">
+          Have a project in mind? Let's discuss how we can help bring your ideas to life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <Card className="p-8 slide-left">
+          <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="name" class="text-sm font-medium">Name</label>
+                <Input id="name" placeholder="Your name" />
+              </div>
+              <div class="space-y-2">
+                <label for="email" class="text-sm font-medium">Email</label>
+                <Input id="email" type="email" placeholder="Your email" />
+              </div>
+            </div>
+            
+            <div class="space-y-2">
+              <label for="subject" class="text-sm font-medium">Subject</label>
+              <Input id="subject" placeholder="Project subject" />
+            </div>
+            
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-medium">Message</label>
+              <Textarea id="message" placeholder="Tell us about your project" rows={6} />
+            </div>
+            
+            <Button size="lg" className="w-full">Send Message</Button>
+          </form>
+        </Card>
+
+        <!-- Contact Information -->
+        <div class="space-y-8 slide-right">
+          <div>
+            <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+            <p class="text-muted-foreground mb-8">
+              Feel free to reach out to us through any of these channels. We're here to help!
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                <Mail className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">Email Us</h3>
+                <p class="text-muted-foreground">hello@digitalagency.com</p>
+                <p class="text-muted-foreground">support@digitalagency.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                <Phone className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">Call Us</h3>
+                <p class="text-muted-foreground">+1 (555) 123-4567</p>
+                <p class="text-muted-foreground">+1 (555) 765-4321</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                <MapPin className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">Visit Us</h3>
+                <p class="text-muted-foreground">
+                  123 Digital Street<br />
+                  Tech Hub, Suite 101<br />
+                  San Francisco, CA 94105
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                <Clock className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">Business Hours</h3>
+                <p class="text-muted-foreground">
+                  Monday - Friday: 9:00 AM - 6:00 PM<br />
+                  Saturday: 10:00 AM - 4:00 PM<br />
+                  Sunday: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-20 bg-muted/30">
+    <div class="container mx-auto px-6">
+      <Card className="p-8 fade-in">
+        <h2 class="text-2xl font-bold mb-8 text-center">Our Location</h2>
+        <div class="aspect-video rounded-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0977902074363!2d-122.39568492361064!3d37.78779997109633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807d2a7800a5%3A0x8f52d8e755814cd!2sDowntown%20San%20Francisco%2C%20San%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1709094008044!5m2!1sen!2s"
+            width="100%"
+            height height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-full">
+          </iframe>
+        </div>
+      </Card>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-12 text-center fade-in">Frequently Asked Questions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <Card className="p-6 slide-left">
+          <h3 class="font-semibold mb-2">What is your typical project timeline?</h3>
+          <p class="text-muted-foreground">
+            Project timelines vary depending on scope and complexity. Typically, small projects take 4-6 weeks, while larger projects can take 3-6 months.
+          </p>
+        </Card>
+
+        <Card className="p-6 slide-left [animation-delay:200ms]">
+          <h3 class="font-semibold mb-2">Do you offer maintenance services?</h3>
+          <p class="text-muted-foreground">
+            Yes, we offer ongoing maintenance and support packages to ensure your digital assets remain up-to-date and secure.
+          </p>
+        </Card>
+
+        <Card className="p-6 slide-left">
+          <h3 class="font-semibold mb-2">What is your payment structure?</h3>
+          <p class="text-muted-foreground">
+            We typically require a 50% deposit to begin work, with the remaining balance due upon project completion. We also offer flexible payment plans.
+          </p>
+        </Card>
+
+        <Card className="p-6 slide-left [animation-delay:200ms]">
+          <h3 class="font-semibold mb-2">Do you work with international clients?</h3>
+          <p class="text-muted-foreground">
+            Yes, we work with clients worldwide and have experience managing projects across different time zones.
+          </p>
+        </Card>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ArrowRight, ExternalLink } from 'lucide-react';
+---
+
+<Layout title="Portfolio">
+  <!-- Hero Section -->
+  <section class="relative py-20">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 -z-10"></div>
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Work</h1>
+        <p class="text-xl text-muted-foreground">
+          Explore our portfolio of successful digital projects and transformative solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <Card className="overflow-hidden slide-left">
+          <img 
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
+            alt="E-commerce Website"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">E-commerce Platform</h3>
+            <p class="text-muted-foreground mb-4">
+              A modern e-commerce platform with advanced features and seamless user experience.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">React</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Node.js</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Stripe</span>
+            </div>
+            <Button variant="outline" className="w-full">
+              View Case Study <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </Card>
+
+        <!-- Project 2 -->
+        <Card className="overflow-hidden slide-left [animation-delay:200ms]">
+          <img 
+            src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80"
+            alt="Mobile App"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Health & Fitness App</h3>
+            <p class="text-muted-foreground mb-4">
+              A comprehensive health tracking app with personalized workout plans.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">React Native</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Firebase</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">AI</span>
+            </div>
+            <Button variant="outline" className="w-full">
+              View Case Study <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </Card>
+
+        <!-- Project 3 -->
+        <Card className="overflow-hidden slide-left">
+          <img 
+            src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80"
+            alt="Analytics Dashboard"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Analytics Dashboard</h3>
+            <p class="text-muted-foreground mb-4">
+              Real-time analytics dashboard for business intelligence and reporting.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Vue.js</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">D3.js</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">AWS</span>
+            </div>
+            <Button variant="outline" className="w-full">
+              View Case Study <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </Card>
+
+        <!-- Project 4 -->
+        <Card className="overflow-hidden slide-left [animation-delay:200ms]">
+          <img 
+            src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80"
+            alt="Educational Platform"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Educational Platform</h3>
+            <p class="text-muted-foreground mb-4">
+              Online learning platform with interactive courses and real-time collaboration.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Next.js</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">GraphQL</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">WebRTC</span>
+            </div>
+            <Button variant="outline" className="w-full">
+              View Case Study <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="py-20 bg-muted/30">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">Client Testimonials</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card className="p-6 slide-left">
+          <p class="text-muted-foreground mb-6">
+            "Working with the Digital Agency team was a game-changer for our business. They delivered exceptional results that exceeded our expectations."
+          </p>
+          <div class="flex items-center">
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80"
+              alt="Client"
+              class="w-12 h-12 rounded-full mr-4"
+            />
+            <div>
+              <p class="font-semibold">John Smith</p>
+              <p class="text-sm text-muted-foreground">CEO, Tech Solutions</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-6 slide-left [animation-delay:200ms]">
+          <p class="text-muted-foreground mb-6">
+            "Their attention to detail and commitment to delivering high-quality solutions made them the perfect partner for our digital transformation."
+          </p>
+          <div class="flex items-center">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80"
+              alt="Client"
+              class="w-12 h-12 rounded-full mr-4"
+            />
+            <div>
+              <p class="font-semibold">Sarah Johnson</p>
+              <p class="text-sm text-muted-foreground">Marketing Director, Brand Co</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-6 slide-left [animation-delay:400ms]">
+          <p class="text-muted-foreground mb-6">
+            "The team's expertise in digital marketing helped us achieve remarkable growth in our online presence and customer engagement."
+          </p>
+          <div class="flex items-center">
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+              alt="Client"
+              class="w-12 h-12 rounded-full mr-4"
+            />
+            <div>
+              <p class="font-semibold">Michael Chen</p>
+              <p class="text-sm text-muted-foreground">Founder, E-commerce Plus</p>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Target, Award, Heart } from 'lucide-react';
+---
+
+<Layout title="About Us">
+  <!-- Hero Section -->
+  <section class="relative py-20">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 -z-10"></div>
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
+        <p class="text-xl text-muted-foreground">
+          We're a team of passionate digital creators, innovators, and problem solvers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 slide-left">
+          <h2 class="text-3xl font-bold">Our Story</h2>
+          <p class="text-muted-foreground">
+            Founded in 2020, Digital Agency has grown from a small team of dreamers to a full-service digital agency serving clients worldwide. Our journey has been driven by a singular mission: to help businesses thrive in the digital age.
+          </p>
+          <p class="text-muted-foreground">
+            We believe in the power of technology to transform businesses and create meaningful connections. Our approach combines creativity, technical expertise, and strategic thinking to deliver solutions that drive real results.
+          </p>
+          <div class="grid grid-cols-2 gap-6 pt-6">
+            <div>
+              <p class="text-3xl font-bold">200+</p>
+              <p class="text-muted-foreground">Projects Completed</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold">50+</p>
+              <p class="text-muted-foreground">Team Members</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold">30+</p>
+              <p class="text-muted-foreground">Countries Served</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold">95%</p>
+              <p class="text-muted-foreground">Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative slide-right">
+          <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
+            alt="Our Team"
+            class="rounded-lg shadow-xl"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="py-20 bg-muted/30">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">Our Values</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card className="p-6 slide-left">
+          <Heart className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Passion</h3>
+          <p class="text-muted-foreground">
+            We're passionate about digital excellence and helping businesses succeed in the digital world.
+          </p>
+        </Card>
+
+        <Card className="p-6 slide-left [animation-delay:200ms]">
+          <Target className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+          <p class="text-muted-foreground">
+            We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions.
+          </p>
+        </Card>
+
+        <Card className="p-6 slide-left [animation-delay:400ms]">
+          <Award className="w-12 h-12 text-primary mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Excellence</h3>
+          <p class="text-muted-foreground">
+            We strive for excellence in everything we do, from code quality to client service.
+          </p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">Our Team</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <Card className="p-6 text-center slide-left">
+          <img
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+            alt="Team Member"
+            class="w-24 h-24 rounded-full mx-auto mb-4"
+          />
+          <h3 class="text-xl font-semibold">David Chen</h3>
+          <p class="text-muted-foreground mb-2">CEO & Founder</p>
+        </Card>
+
+        <Card className="p-6 text-center slide-left [animation-delay:200ms]">
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80"
+            alt="Team Member"
+            class="w-24 h-24 rounded-full mx-auto mb-4"
+          />
+          <h3 class="text-xl font-semibold">Sarah Johnson</h3>
+          <p class="text-muted-foreground mb-2">Creative Director</p>
+        </Card>
+
+        <Card className="p-6 text-center slide-left [animation-delay:400ms]">
+          <img
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80"
+            alt="Team Member"
+            class="w-24 h-24 rounded-full mx-auto mb-4"
+          />
+          <h3 class="text-xl font-semibold">Michael Smith</h3>
+          <p class="text-muted-foreground mb-2">Tech Lead</p>
+        </Card>
+
+        <Card className="p-6 text-center slide-left [animation-delay:600ms]">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80"
+            alt="Team Member"
+            class="w-24 h-24 rounded-full mx-auto mb-4"
+          />
+          <h3 class="text-xl font-semibold">Emily Brown</h3>
+          <p class="text-muted-foreground mb-2">Marketing Director</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us CTA -->
+  <section class="py-20 bg-primary text-primary-foreground">
+    <div class="container mx-auto px-6 text-center fade-in">
+      <h2 class="text-3xl font-bold mb-6">Join Our Team</h2>
+      <p class="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+        We're always looking for talented individuals to join our growing team.
+      </p>
+      <Button size="lg" variant="secondary" className="text-lg">
+        View Open Positions
+      </Button>
+    </div>
+  </section>
+</Layout>
